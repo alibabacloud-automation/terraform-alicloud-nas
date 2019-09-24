@@ -1,3 +1,8 @@
+variable "region" {
+  description = "The region used to launch this module resources."
+  default     = ""
+}
+
 ##############################################################
 #variables for alicloud_nas_access_group
 ##############################################################
@@ -89,3 +94,4 @@ variable "vswitch_id" {
   description = "The vswitch ids. The vswitch_id fo the mount target."
   default     = ""
 }
+

@@ -17,3 +17,4 @@ variable "storage_type" {
   description = "The storage_type of file system."
   default     = "Performance"
 }
+

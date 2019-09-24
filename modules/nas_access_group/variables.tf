@@ -17,3 +17,4 @@ variable "access_group_type" {
   description = "The type of nas access group."
   default     = "Vpc"
 }
+
