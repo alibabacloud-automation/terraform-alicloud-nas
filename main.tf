@@ -1,9 +1,3 @@
-provider "alicloud" {
-  version              = ">=1.56.0"
-  region               = var.region != "" ? var.region : null
-  configuration_source = "terraform-alicloud-modules/classic-load-balance"
-}
-
 module "file_system" {
   source = "./modules/nas_file_system"
 
