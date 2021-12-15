@@ -19,11 +19,6 @@ variable "access_group_name" {
 ##############################################################
 #variables for alicloud_nas_file_system
 ##############################################################
-variable "file_system_protocol_type" {
-  description = "The protocol_type of file system."
-  default     = "NFS"
-}
-
 variable "file_system_storage_type" {
   description = "The storage_type of file system."
   default     = "Performance"
