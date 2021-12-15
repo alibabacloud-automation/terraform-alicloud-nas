@@ -1,10 +1,14 @@
+data "alicloud_nas_protocols" "example" {
+  type = var.file_system_storage_type
+}
+
 module "file_system" {
   source = "../../"
 
   ###############################################################
   #variables for file system
   ##############################################################
-  file_system_protocol_type = var.file_system_protocol_type
+  file_system_protocol_type = data.alicloud_nas_protocols.example.protocols.0
 
   create_file_system       = true
   file_system_storage_type = var.file_system_storage_type
