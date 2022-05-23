@@ -4,10 +4,10 @@
 Terraform module which creates NAS resources on Alibaba Cloud
 
 These types of resources are supported:
-- [nas_file_system] (https://www.terraform.io/docs/providers/alicloud/r/nas_file_system.html)
-- [nas_access_group](https://www.terraform.io/docs/providers/alicloud/r/nas_access_group.html)
-- [nas_access_rule] (https://www.terraform.io/docs/providers/alicloud/r/nas_access_rule.html)
-- [nas_mount_target](https://www.terraform.io/docs/providers/alicloud/r/nas_mount_target.html)
+- [nas_file_system](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/nas_file_system)
+- [nas_access_group](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/nas_access_group)
+- [nas_access_rule](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/nas_access_rule)
+- [nas_mount_target](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/nas_mount_target)
 
 ## Usage
 
