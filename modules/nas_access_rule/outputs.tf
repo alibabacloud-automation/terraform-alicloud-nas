@@ -42,4 +42,3 @@ output "this_access_rule_priority" {
 output "this_access_rule_id" {
   value = local.this_access_rule_id
 }
-

@@ -41,4 +41,3 @@ output "this_access_rule_priority" {
 output "this_access_rule_id" {
   value = module.access_rule.this_access_rule_id
 }
-

@@ -1,12 +1,12 @@
 ##############################################################
 #variables for alicloud_nas_access_group
 ##############################################################
-access_group_description = "terraform-alicloud-nas-access-group-update"
+access_group_description = "update-tf-testacc-access-group-description"
 
 ##############################################################
 #variables for alicloud_nas_file_system
 ##############################################################
-file_system_description = "terraform-alicloud-nas-file-system-update"
+file_system_description = "update-tf-testacc-file-system-description"
 
 ##############################################################
 #variables for alicloud_nas_access_rule

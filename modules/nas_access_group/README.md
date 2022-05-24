@@ -15,4 +15,3 @@
 | this_access_group_description | Permission group description. It is the same as the permission group name by default |
 | this_access_group_type | Permission group type, including the Vpc and Classic types |
 | this_access_group_name | Permission group name |
-

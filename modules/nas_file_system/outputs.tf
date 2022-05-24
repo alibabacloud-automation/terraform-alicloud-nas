@@ -23,4 +23,3 @@ output "this_protocol_type" {
 output "this_storage_type" {
   value = local.this_storage_type
 }
-
