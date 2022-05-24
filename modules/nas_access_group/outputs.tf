@@ -18,4 +18,3 @@ output "this_access_group_type" {
 output "this_access_group_name" {
   value = local.this_access_group_name
 }
-

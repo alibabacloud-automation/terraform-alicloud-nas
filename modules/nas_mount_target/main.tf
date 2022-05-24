@@ -4,4 +4,3 @@ resource "alicloud_nas_mount_target" "this_mount_target" {
   access_group_name = var.access_group_name
   vswitch_id        = var.vswitch_id
 }
-

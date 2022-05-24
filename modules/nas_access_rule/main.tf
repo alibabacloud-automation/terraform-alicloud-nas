@@ -6,4 +6,3 @@ resource "alicloud_nas_access_rule" "this_access_rule" {
   user_access_type  = var.user_access_type
   priority          = var.access_rule_priority
 }
-
