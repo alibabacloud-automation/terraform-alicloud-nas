@@ -56,28 +56,28 @@ module "file_system" {
 
 }
 
-#module "access_rule" {
-#  source = "../.."
-#
-#  #access_group
-#  create_access_group      = false
-#
-#  #file_system
-#  create_file_system = false
-#
-#  #access_rule
-#  create_access_rule = true
-#
-#  access_group_name = module.access_group.this_access_group_name
-#  source_cidr_ip       = var.source_cidr_ip
-#  rw_access_type       = var.rw_access_type
-#  user_access_type     = var.user_access_type
-#  access_rule_priority = var.access_rule_priority
-#
-#  #mount_target
-#  create_mount_target = false
-#
-#}
+module "access_rule" {
+  source = "../.."
+
+  #access_group
+  create_access_group      = false
+
+  #file_system
+  create_file_system = false
+
+  #access_rule
+  create_access_rule = true
+
+  access_group_name = module.access_group.this_access_group_name
+  source_cidr_ip       = var.source_cidr_ip
+  rw_access_type       = var.rw_access_type
+  user_access_type     = var.user_access_type
+  access_rule_priority = var.access_rule_priority
+
+  #mount_target
+  create_mount_target = false
+
+}
 
 module "mount_target" {
   source = "../.."
