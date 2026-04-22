@@ -1,11 +1,10 @@
 locals {
-  this_access_group_name = join("", alicloud_nas_mount_target.this_mount_target.*.access_group_name)
   this_file_system_id = join(
     "",
-    alicloud_nas_mount_target.this_mount_target.*.file_system_id,
+    alicloud_nas_mount_target.this_mount_target[*].file_system_id,
   )
-  this_mount_target_domain = join("", alicloud_nas_mount_target.this_mount_target.*.id)
-  this_vswitch_id          = join("", alicloud_nas_mount_target.this_mount_target.*.vswitch_id)
+  this_mount_target_domain = join("", alicloud_nas_mount_target.this_mount_target[*].id)
+  this_vswitch_id          = join("", alicloud_nas_mount_target.this_mount_target[*].vswitch_id)
 }
 
 output "this_file_system_id" {

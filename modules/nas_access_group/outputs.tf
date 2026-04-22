@@ -1,10 +1,10 @@
 locals {
   this_description = join(
     "",
-    alicloud_nas_access_group.this_access_group.*.description,
+    alicloud_nas_access_group.this_access_group[*].description,
   )
-  this_access_group_name = join("", alicloud_nas_access_group.this_access_group.*.name)
-  this_type              = join("", alicloud_nas_access_group.this_access_group.*.type)
+  this_access_group_name = join("", alicloud_nas_access_group.this_access_group[*].name)
+  this_type              = join("", alicloud_nas_access_group.this_access_group[*].type)
 }
 
 output "this_access_group_description" {

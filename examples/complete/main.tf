@@ -6,11 +6,13 @@ data "alicloud_nas_protocols" "default" {
 }
 
 module "vpc" {
-  source             = "alibaba/vpc/alicloud"
+  source  = "alibaba/vpc/alicloud"
+  version = "2.0.0"
+
   create             = true
   vpc_cidr           = "172.16.0.0/12"
   vswitch_cidrs      = ["172.16.0.0/21"]
-  availability_zones = [data.alicloud_zones.default.zones.0.id]
+  availability_zones = [data.alicloud_zones.default.zones[0].id]
 }
 
 module "access_group" {
@@ -44,7 +46,7 @@ module "file_system" {
   create_file_system = true
 
   file_system_type          = "standard"
-  file_system_protocol_type = data.alicloud_nas_protocols.default.protocols.0
+  file_system_protocol_type = data.alicloud_nas_protocols.default.protocols[0]
   file_system_storage_type  = "Capacity"
   file_system_description   = var.file_system_description
 
@@ -60,7 +62,7 @@ module "access_rule" {
   source = "../.."
 
   #access_group
-  create_access_group      = false
+  create_access_group = false
 
   #file_system
   create_file_system = false
@@ -68,7 +70,7 @@ module "access_rule" {
   #access_rule
   create_access_rule = true
 
-  access_group_name = module.access_group.this_access_group_name
+  access_group_name    = module.access_group.this_access_group_name
   source_cidr_ip       = var.source_cidr_ip
   rw_access_type       = var.rw_access_type
   user_access_type     = var.user_access_type

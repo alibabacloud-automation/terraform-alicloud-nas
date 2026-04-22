@@ -1,11 +1,11 @@
 locals {
-  this_file_system_id = join("", alicloud_nas_file_system.this_file_system.*.id)
-  this_description    = join("", alicloud_nas_file_system.this_file_system.*.description)
+  this_file_system_id = join("", alicloud_nas_file_system.this_file_system[*].id)
+  this_description    = join("", alicloud_nas_file_system.this_file_system[*].description)
   this_protocol_type = join(
     "",
-    alicloud_nas_file_system.this_file_system.*.protocol_type,
+    alicloud_nas_file_system.this_file_system[*].protocol_type,
   )
-  this_storage_type = join("", alicloud_nas_file_system.this_file_system.*.storage_type)
+  this_storage_type = join("", alicloud_nas_file_system.this_file_system[*].storage_type)
 }
 
 output "this_file_system_id" {
